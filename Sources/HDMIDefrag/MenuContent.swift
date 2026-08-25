@@ -43,7 +43,7 @@ struct MenuContent: View {
             Label("Verified: dithering off", systemImage: "checkmark.circle")
                 .foregroundStyle(.secondary)
         case .some(false):
-            Label("Dithering still on -- try Re-apply", systemImage: "exclamationmark.triangle")
+            Label("Dithering still on, try Re-apply", systemImage: "exclamationmark.triangle")
                 .foregroundStyle(.orange)
         case .none:
             Label("No displays detected", systemImage: "questionmark.circle")

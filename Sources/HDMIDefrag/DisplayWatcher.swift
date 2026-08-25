@@ -2,7 +2,7 @@ import AppKit
 import CoreGraphics
 
 /// The dithering flag resets whenever a display connects/reconnects, and (empirically)
-/// can also reset across sleep/wake -- so we watch both and debounce a reapply.
+/// can also reset across sleep/wake, so we watch both and debounce a reapply.
 final class DisplayWatcher {
     var onNeedsReapply: (() -> Void)?
 

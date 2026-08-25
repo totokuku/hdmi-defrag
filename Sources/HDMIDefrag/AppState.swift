@@ -12,7 +12,7 @@ final class AppState: ObservableObject {
     @Published private(set) var launchAtLogin: Bool
 
     /// What the IORegistry actually reports right now, read back after every apply.
-    /// nil means "no displays found", not "unknown" -- see DisplayDither.currentlyDisabled.
+    /// nil means "no displays found", not "unknown". See DisplayDither.currentlyDisabled.
     @Published private(set) var verifiedDisabled: Bool?
 
     private let watcher = DisplayWatcher()

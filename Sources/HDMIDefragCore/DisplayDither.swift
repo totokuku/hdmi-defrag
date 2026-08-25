@@ -8,7 +8,7 @@ public enum DisplayScope {
 
 /// Flips the GPU/DCP "enableDither" property that IOMobileFramebufferAP exposes
 /// per display. This is the temporal dithering (FRC) that shows up as visible
-/// flicker/noise over HDMI on Apple silicon Macs -- most famously on the M4 Mac mini.
+/// flicker/noise over HDMI on Apple silicon Macs, most famously on the M4 Mac mini.
 /// Same mechanism as Stillcolor (https://github.com/aiaf/Stillcolor), reimplemented here.
 public enum DisplayDither {
     private static let log = Logger(subsystem: "com.tomkucy.hdmidefrag", category: "IOKit")
