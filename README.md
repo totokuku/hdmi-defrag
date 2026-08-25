@@ -150,7 +150,10 @@ next reboot regardless.
 ## Credit
 
 Technique discovered and documented by [Abdullah Arif's Stillcolor](https://github.com/aiaf/Stillcolor)
-(MIT licensed). This is an independent reimplementation, not a fork.
+(MIT licensed). This is an independent reimplementation, not a fork: no code
+was copied, but the hard part was knowing which IOKit property to reach for,
+and that was Stillcolor's finding. Its license is reproduced in full under
+"Third-party notices" in [LICENSE](LICENSE).
 
 ## License
 

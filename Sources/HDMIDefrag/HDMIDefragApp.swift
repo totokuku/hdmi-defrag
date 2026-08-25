@@ -21,7 +21,8 @@ struct HDMIDefragApp: App {
     var body: some Scene {
         MenuBarExtra(
             "HDMI Defrag",
-            systemImage: state.ditheringDisabled ? "livephoto.slash" : "livephoto"
+            // waveform = the pixel value oscillating; slashed = that oscillation stopped
+            systemImage: state.ditheringDisabled ? "waveform.slash" : "waveform"
         ) {
             MenuContent(state: state)
         }
