@@ -1,4 +1,4 @@
-# HDMI Defrag
+# HDMI Defrag v0.1
 
 A tiny macOS menu bar app that fixes the HDMI flicker on Apple silicon Macs
 (most notoriously the M4 Mac mini) by turning off GPU-level temporal
