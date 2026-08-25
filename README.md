@@ -31,6 +31,40 @@ figured out, restructured with a few differences:
 - **Login item via a plain LaunchAgent**, not `SMAppService` -- avoids needing
   a fully Xcode-signed bundle identity for something this small.
 
+## Install
+
+Grab `HDMIDefrag.zip` from the [latest release](https://github.com/totokuku/hdmi-defrag/releases/latest),
+unzip it, and drag `HDMIDefrag.app` to `/Applications`.
+
+**Apple silicon only** (arm64). That's not a limitation so much as the point --
+the dithering behaviour this works around is specific to Apple silicon GPUs.
+macOS 13 or newer.
+
+### First launch: getting past Gatekeeper
+
+The app is ad-hoc signed, not notarized -- I'm not paying Apple $99/yr to
+distribute a 176 KB menu bar utility. macOS will refuse to open it the first
+time with *"Apple could not verify..."*. To let it through:
+
+1. Try to open the app once (it gets blocked -- this is required, it's what
+   puts the app in the list).
+2. Go to **System Settings -> Privacy & Security**, scroll down, and click
+   **Open Anyway** next to HDMIDefrag.
+3. Confirm.
+
+On macOS 15 (Sequoia) and later this is the *only* way -- the old
+right-click -> Open shortcut no longer bypasses Gatekeeper.
+
+Or, from the terminal:
+
+```sh
+xattr -d com.apple.quarantine /Applications/HDMIDefrag.app
+```
+
+If you'd rather not trust a stranger's binary, that's entirely reasonable --
+build it yourself from source below. It's about 550 lines and takes a few
+seconds to compile.
+
 ## Build & run
 
 Requires Xcode Command Line Tools (or Xcode) and macOS 13+.
